@@ -1,16 +1,29 @@
 # jansouza.com
 
-Código da homepage [jansouza.com](https://jansouza.com). Uma página em HTML puro, com CSS e
-JavaScript inline, sem build e sem dependências.
+Source for the [jansouza.com](https://jansouza.com) homepage. Plain HTML, no build step and no dependencies.
 
-## Rodar localmente
+## Languages
+
+Each language has its own page, and they all share the same CSS and JS:
+
+| Language   | File            | URL     |
+|------------|-----------------|---------|
+| Portuguese | `index.html`    | `/`     |
+| English    | `en/index.html` | `/en/`  |
+| Spanish    | `es/index.html` | `/es/`  |
+
+Styles and scripts live in `assets/style.css` and `assets/main.js`. When you change text, a link or a
+quote, make the same change on all three pages. To add a language, create its folder, add its link to
+the language switcher and to the `hreflang` tags on every page, and add its URL to `sitemap.xml`.
+
+## Run locally
 
 ```bash
 python3 -m http.server 8000
 ```
 
-Depois é só abrir http://localhost:8000.
+Then open http://localhost:8000.
 
 ## Deploy
 
-O site é publicado no Cloudflare Pages direto da raiz do repositório, sem comando de build.
+The site is published on Cloudflare Pages straight from the repository root, with no build command.
